@@ -15,6 +15,8 @@
 		10767046221054480037CBA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10767044221054480037CBA8 /* LaunchScreen.storyboard */; };
 		10767051221054480037CBA8 /* SocialAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10767050221054480037CBA8 /* SocialAppTests.swift */; };
 		1076705C221054480037CBA8 /* SocialAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1076705B221054480037CBA8 /* SocialAppUITests.swift */; };
+		1076706A221057040037CBA8 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10767069221057040037CBA8 /* Friend.swift */; };
+		1076706C221057BA0037CBA8 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1076706B221057BA0037CBA8 /* Connection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		10767057221054480037CBA8 /* FriendsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FriendsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1076705B221054480037CBA8 /* SocialAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialAppUITests.swift; sourceTree = "<group>"; };
 		1076705D221054480037CBA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10767069221057040037CBA8 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		1076706B221057BA0037CBA8 /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 			children = (
 				10767038221054450037CBA8 /* AppDelegate.swift */,
 				1076703A221054450037CBA8 /* ViewController.swift */,
+				10767069221057040037CBA8 /* Friend.swift */,
+				1076706B221057BA0037CBA8 /* Connection.swift */,
 				1076703C221054450037CBA8 /* Main.storyboard */,
 				10767042221054480037CBA8 /* Assets.xcassets */,
 				10767044221054480037CBA8 /* LaunchScreen.storyboard */,
@@ -261,7 +267,9 @@
 			files = (
 				10767041221054450037CBA8 /* SocialApp.xcdatamodeld in Sources */,
 				1076703B221054450037CBA8 /* ViewController.swift in Sources */,
+				1076706C221057BA0037CBA8 /* Connection.swift in Sources */,
 				10767039221054450037CBA8 /* AppDelegate.swift in Sources */,
+				1076706A221057040037CBA8 /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

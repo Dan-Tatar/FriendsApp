@@ -22,35 +22,16 @@ class ViewController: UITableViewController, UISearchResultsUpdating {
         search.searchResultsUpdater = self
         navigationItem.searchController = search
         
-        fetchData()
-    }
-
-    func fetchData() {
+        let urlString = "https://www.hackingwithswift.com/samples/friendface.json"
         
-        DispatchQueue.global().async {
-            do {
-                let urlString = URL(string: "https://www.hackingwithswift.com/samples/friendface.json")!
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+   
+        decoder.decode([Friend].self, fromURL: urlString) { friends in
             
-                guard let data = try? Data(contentsOf: urlString) else {
-                    print("unable make contents of URL")
-                    return
-                }
-                let decoder  = JSONDecoder()
-                decoder.dateDecodingStrategy = .iso8601
-              
-                
-                guard let savedData = try? decoder.decode([Friend].self, from: data) else {
-                    print("unable to decode data")
-                    return
-                }
-                DispatchQueue.main.async {
-                    self.friends = savedData
-                    self.filteredFriends = savedData
-                    self.tableView.reloadData()
-                }
-            } catch {
-                print(error.localizedDescription)
-            }
+        self.friends = friends
+        self.filteredFriends = friends
+        self.tableView.reloadData()
         }
     }
 
